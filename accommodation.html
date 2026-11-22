@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation &amp; Activities | Discover Lesotho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="scrollProgress"></div>
+
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="fs-4">🏔️</span>
+            <span>Discover Lesotho</span>
+            <span class="brand-badge d-none d-sm-inline">Kingdom in the Sky</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto me-3 align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-compass"></i> About</a></li>
+                <li class="nav-item"><a class="nav-link" href="destinations.html"><i class="bi bi-geo-alt"></i> Destinations</a></li>
+                <li class="nav-item"><a class="nav-link active" href="accommodation.html"><i class="bi bi-building"></i> Accommodation</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="bi bi-images"></i> Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+                <div id="navUserPill" class="nav-user-pill">
+                    <span id="navUserAvatar" class="nav-user-avatar">?</span>
+                    <span>Hi, <strong id="navUserName">Traveler</strong></span>
+                </div>
+                <button id="darkToggle" aria-label="Toggle dark mode">
+                    <i class="bi bi-moon-stars-fill"></i> Dark Mode
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+
+<main class="container my-5 py-3">
+    <div class="section-header reveal">
+        <span class="badge-pill"><i class="bi bi-house-heart-fill"></i> Where to Stay</span>
+        <h1 class="brand-font">Accommodation &amp; Alpine Lodges</h1>
+        <p>From cosy mountain stone chalets and luxury alpine lodges to comfortable capital hotels and pristine wilderness campsites.</p>
+    </div>
+
+    
+    <div class="row g-4">
+        
+        <div class="col-md-4 reveal">
+            <article class="card">
+                <div class="card-img-wrap">
+                    <img src="lodge.jpg" class="card-img-top" alt="Cosy luxury mountain lodge overlooking alpine valleys" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <div class="accom-meta">
+                        <span class="card-tag"><i class="bi bi-house"></i> Highland Lodge</span>
+                        <span class="price-badge">From M850 / night</span>
+                    </div>
+                    <div class="accom-stars">★★★★☆</div>
+                    <h3>Mountain Lodges</h3>
+                    <p>Authentic stone and thatch chalets with open log fireplaces, panoramic mountain views, and hearty Basotho culinary dining.</p>
+                    <ul class="accom-amenities">
+                        <li><i class="bi bi-fire"></i> Indoor log fireplace &amp; heating</li>
+                        <li><i class="bi bi-cup-hot"></i> Traditional country breakfast included</li>
+                        <li><i class="bi bi-compass"></i> Direct pony trekking &amp; hiking trail access</li>
+                        <li><i class="bi bi-wifi"></i> Satellite Wi-Fi in main lodge</li>
+                    </ul>
+                    <a href="contact.html?accommodation=Mountain%20Lodge" class="btn btn-accent btn-sm mt-auto w-100">
+                        <i class="bi bi-calendar-check"></i> Book Mountain Lodge
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        
+        <div class="col-md-4 reveal">
+            <article class="card">
+                <div class="card-img-wrap">
+                    <img src="hotel.jpeg" class="card-img-top" alt="Comfortable hotel room with modern furnishings" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <div class="accom-meta">
+                        <span class="card-tag"><i class="bi bi-buildings"></i> City &amp; Resort Hotel</span>
+                        <span class="price-badge">From M1,200 / night</span>
+                    </div>
+                    <div class="accom-stars">★★★★★</div>
+                    <h3>Modern Hotels</h3>
+                    <p>Executive comfort in Maseru and alpine resorts. Equipped with climate control, conference spaces, international dining, and spa facilities.</p>
+                    <ul class="accom-amenities">
+                        <li><i class="bi bi-wifi"></i> High-speed Wi-Fi &amp; air conditioning</li>
+                        <li><i class="bi bi-cup-straw"></i> On-site restaurants, bar &amp; lounge</li>
+                        <li><i class="bi bi-water"></i> Swimming pool &amp; wellness facilities</li>
+                        <li><i class="bi bi-p-square"></i> Secure 24/7 parking &amp; airport shuttle</li>
+                    </ul>
+                    <a href="contact.html?accommodation=Hotel" class="btn btn-accent btn-sm mt-auto w-100">
+                        <i class="bi bi-calendar-check"></i> Book Hotel Stay
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        
+        <div class="col-md-4 reveal">
+            <article class="card">
+                <div class="card-img-wrap">
+                    <img src="camping.jpeg" class="card-img-top" alt="Tent pitched under a starry sky in the highlands" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <div class="accom-meta">
+                        <span class="card-tag"><i class="bi bi-tree"></i> Wilderness Camping</span>
+                        <span class="price-badge">From M200 / night</span>
+                    </div>
+                    <div class="accom-stars">★★★★☆</div>
+                    <h3>Highland Camping</h3>
+                    <p>Pitch your tent in designated national park reserves and wilderness riversides with zero light pollution for world-class stargazing.</p>
+                    <ul class="accom-amenities">
+                        <li><i class="bi bi-moon-stars"></i> Pristine dark sky Milky Way stargazing</li>
+                        <li><i class="bi bi-fire"></i> Braai / campfire facilities &amp; firewood</li>
+                        <li><i class="bi bi-shield-check"></i> Clean ablution blocks &amp; fresh spring water</li>
+                        <li><i class="bi bi-signpost-2"></i> On-site wilderness trail guides</li>
+                    </ul>
+                    <a href="contact.html?accommodation=Camping" class="btn btn-accent btn-sm mt-auto w-100">
+                        <i class="bi bi-calendar-check"></i> Book Campsite
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    
+    <section class="calculator-card reveal">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-7">
+                <span class="badge-pill mb-2"><i class="bi bi-calculator"></i> Interactive Tool</span>
+                <h3 class="brand-font">Trip Cost Estimator</h3>
+                <p class="text-muted">Calculate an estimated quote for your stay and planned highland activities.</p>
+
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="calcAccom" class="form-label">Accommodation Type</label>
+                        <select id="calcAccom" class="form-select" onchange="calculateTripCost()">
+                            <option value="850">Mountain Lodge (M850 / night)</option>
+                            <option value="1200">Modern Hotel (M1,200 / night)</option>
+                            <option value="200">Wilderness Camping (M200 / night)</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <label for="calcNights" class="form-label">Nights</label>
+                        <input type="number" id="calcNights" class="form-control" value="3" min="1" max="30" oninput="calculateTripCost()">
+                    </div>
+                    <div class="col-sm-3 col-6">
+                        <label for="calcGuests" class="form-label">Guests</label>
+                        <input type="number" id="calcGuests" class="form-control" value="2" min="1" max="20" oninput="calculateTripCost()">
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <label class="form-label d-block">Optional Adventure Add-ons:</label>
+                    <div class="d-flex flex-wrap gap-3">
+                        <label class="form-check-label d-flex align-items-center gap-1 cursor-pointer">
+                            <input type="checkbox" id="calcPony" class="form-check-input mt-0" onchange="calculateTripCost()">
+                            Pony Trekking (+M250 / guest)
+                        </label>
+                        <label class="form-check-label d-flex align-items-center gap-1 cursor-pointer">
+                            <input type="checkbox" id="calcHike" class="form-check-input mt-0" onchange="calculateTripCost()">
+                            Guided Falls Hike (+M180 / guest)
+                        </label>
+                        <label class="form-check-label d-flex align-items-center gap-1 cursor-pointer">
+                            <input type="checkbox" id="calcSki" class="form-check-input mt-0" onchange="calculateTripCost()">
+                            AfriSki Pass (+M450 / guest)
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="calc-total-box">
+                    <span class="text-uppercase small tracking-wide opacity-75">Estimated Total Budget</span>
+                    <div id="calcTotalLSL" class="calc-total-amount">M 2,550</div>
+                    <div id="calcTotalUSD" class="fs-5 opacity-75 mb-3">≈ $143 USD</div>
+                    <a href="contact.html" class="btn btn-warning w-100 fw-bold">
+                        <i class="bi bi-envelope-check"></i> Request Custom Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="mt-5 py-4">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6 reveal">
+                <span class="badge-pill mb-2"><i class="bi bi-lightning-charge-fill"></i> Highland Thrills</span>
+                <h2 class="brand-font">Things to Do in Lesotho</h2>
+                <p>Whether you crave high-altitude adrenaline or peaceful cultural immersion, the Kingdom has adventures for every style of explorer.</p>
+                <ul class="activities-list">
+                    <li><i class="bi bi-chevron-right text-success"></i> <strong>Basotho Pony Trekking:</strong> Traverse highland trails atop sure-footed native ponies</li>
+                    <li><i class="bi bi-chevron-right text-success"></i> <strong>Alpine Skiing &amp; Snowboarding:</strong> Carve real snow at 3,222m at AfriSki Resort</li>
+                    <li><i class="bi bi-chevron-right text-success"></i> <strong>Guinness World Record Abseil:</strong> 204m abseil down Maletsunyane Falls</li>
+                    <li><i class="bi bi-chevron-right text-success"></i> <strong>Scenic 4x4 Mountain Driving:</strong> Scale the hairpins of Sani Pass and Baboons Pass</li>
+                    <li><i class="bi bi-chevron-right text-success"></i> <strong>Reservoir Boat Cruises:</strong> Explore the alpine fjords of Katse Dam</li>
+                    <li><i class="bi bi-chevron-right text-success"></i> <strong>San Rock Art Tours:</strong> Discover ancient hunter-gatherer sacred paintings</li>
+                </ul>
+                <a href="contact.html" class="btn btn-accent mt-3">
+                    <i class="bi bi-calendar-plus"></i> Book Activities &amp; Tours
+                </a>
+            </div>
+            <div class="col-lg-6 reveal">
+                <img src="hiking.jpeg" class="img-fluid about-img" alt="Hiker overlooking high-altitude mountain valley" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5 py-3 reveal">
+        <div class="section-header">
+            <span class="badge-pill"><i class="bi bi-calendar-range"></i> Seasonal Guide</span>
+            <h2 class="brand-font">Best Time to Visit</h2>
+            <p>Lesotho is a vibrant year-round destination — each season brings its own distinct mountain magic.</p>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-3">
+                <div class="season-card">
+                    <div class="season-icon">🌸</div>
+                    <h5>Spring (Sep–Nov)</h5>
+                    <p>Wildflowers carpet the highland valleys. Moderate temperatures perfect for pony trekking and ridge hikes.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="season-card">
+                    <div class="season-icon">☀️</div>
+                    <h5>Summer (Dec–Feb)</h5>
+                    <p>Lush green landscapes with roaring waterfalls at peak flow. Pleasant days with dramatic afternoon thunderstorm skies.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="season-card">
+                    <div class="season-icon">🍂</div>
+                    <h5>Autumn (Mar–May)</h5>
+                    <p>Golden alpine grasses and crystal-clear azure skies. The absolute best season for landscape photography.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="season-card season-card--highlight">
+                    <div class="season-icon">❄️</div>
+                    <h5>Winter (Jun–Aug)</h5>
+                    <p>Snow dusting high peaks! Skiing and snowboarding at AfriSki. Freezing night skies offering dazzling stargazing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<button id="backToTop" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<footer>
+    <div class="container footer-inner">
+        <div class="row g-4 justify-content-between align-items-start">
+            <div class="col-md-4">
+                <div class="footer-brand">
+                    <span>🏔️</span> Discover Lesotho
+                </div>
+                <p class="footer-desc">Your official tourism guide to the Kingdom in the Sky. Explore pristine alpine peaks, ancient cultural heritage, and thrilling adventures.</p>
+            </div>
+            <div class="col-md-3">
+                <h6 class="footer-heading">Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Lesotho</a></li>
+                    <li><a href="destinations.html"><i class="bi bi-chevron-right"></i> Tourist Destinations</a></li>
+                    <li><a href="accommodation.html"><i class="bi bi-chevron-right"></i> Accommodation &amp; Rates</a></li>
+                    <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Photo Gallery</a></li>
+                    <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Bookings &amp; Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="footer-heading">Contact &amp; Location</h6>
+                <p class="footer-contact"><i class="bi bi-geo-alt-fill"></i> Tourism House, Kingsway, Maseru</p>
+                <p class="footer-contact"><i class="bi bi-telephone-fill"></i> +266 2231 2345</p>
+                <p class="footer-contact"><i class="bi bi-envelope-fill"></i> info@discoverlesotho.ls</p>
+                <p class="footer-contact"><i class="bi bi-clock-fill"></i> Mon – Fri, 08:00 – 17:00 SAST</p>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+            <p class="footer-copy">&copy; 2026 Discover Lesotho Tourism Website. All rights reserved.</p>
+            <p class="footer-copy text-sm-end">Student Project by Paseka (901022096)</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

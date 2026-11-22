@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Discover Lesotho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="scrollProgress"></div>
+
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="fs-4">🏔️</span>
+            <span>Discover Lesotho</span>
+            <span class="brand-badge d-none d-sm-inline">Kingdom in the Sky</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto me-3 align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-compass"></i> About</a></li>
+                <li class="nav-item"><a class="nav-link" href="destinations.html"><i class="bi bi-geo-alt"></i> Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="accommodation.html"><i class="bi bi-building"></i> Accommodation</a></li>
+                <li class="nav-item"><a class="nav-link active" href="gallery.html"><i class="bi bi-images"></i> Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+                <div id="navUserPill" class="nav-user-pill">
+                    <span id="navUserAvatar" class="nav-user-avatar">?</span>
+                    <span>Hi, <strong id="navUserName">Traveler</strong></span>
+                </div>
+                <button id="darkToggle" aria-label="Toggle dark mode">
+                    <i class="bi bi-moon-stars-fill"></i> Dark Mode
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+
+<main class="container my-5 py-3">
+    <div class="section-header reveal">
+        <span class="badge-pill"><i class="bi bi-camera-fill"></i> Visual Journey</span>
+        <h1 class="brand-font">Photo Gallery</h1>
+        <p>Breathtaking snapshots of the Mountain Kingdom — click any photo to open the interactive high-resolution viewer.</p>
+    </div>
+
+    
+    <div class="filter-btns reveal justify-content-center mb-4">
+        <button class="filter-btn gallery-filter-btn active" data-filter="all">
+            <i class="bi bi-grid-fill"></i> All Photos
+        </button>
+        <button class="filter-btn gallery-filter-btn" data-filter="mountains">
+            <i class="bi bi-triangle-half"></i> Mountains
+        </button>
+        <button class="filter-btn gallery-filter-btn" data-filter="water">
+            <i class="bi bi-water"></i> Water &amp; Dams
+        </button>
+        <button class="filter-btn gallery-filter-btn" data-filter="adventure">
+            <i class="bi bi-compass"></i> Adventure
+        </button>
+        <button class="filter-btn gallery-filter-btn" data-filter="culture">
+            <i class="bi bi-people-fill"></i> Culture &amp; Heritage
+        </button>
+        <button class="filter-btn gallery-filter-btn" data-filter="accommodation">
+            <i class="bi bi-house-door"></i> Stay &amp; Lodges
+        </button>
+    </div>
+
+    
+    <div class="row g-3" id="galleryGrid">
+
+    
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="water">
+            <div class="gallery-wrap" onclick="showImage('maletsunyane.jpeg', 'Maletsunyane Falls')">
+                <img src="maletsunyane.jpeg" class="gallery-image" alt="Maletsunyane Falls 192m waterfall" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Maletsunyane Falls</span>
+                    <span class="gallery-caption-tag">Water</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="water">
+            <div class="gallery-wrap" onclick="showImage('katsedam.jpeg', 'Katse Dam Reservoir')">
+                <img src="katsedam.jpeg" class="gallery-image" alt="Katse Dam high concrete arch wall" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Katse Dam</span>
+                    <span class="gallery-caption-tag">Engineering</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Sani Pass -->
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="adventure">
+            <div class="gallery-wrap" onclick="showImage('sanipass.jpeg', 'Sani Pass 4x4 Ascent')">
+                <img src="sanipass.jpeg" class="gallery-image" alt="Sani Pass steep winding gravel switchbacks" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Sani Pass</span>
+                    <span class="gallery-caption-tag">Adventure</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="mountains">
+            <div class="gallery-wrap" onclick="showImage('highlands.jpeg', 'Maloti Highlands')">
+                <img src="highlands.jpeg" class="gallery-image" alt="Undulating mountain peaks of the Maloti range" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Maloti Highlands</span>
+                    <span class="gallery-caption-tag">Mountains</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="adventure">
+            <div class="gallery-wrap" onclick="showImage('ski.jpeg', 'AfriSki Snow Resort')">
+                <img src="ski.jpeg" class="gallery-image" alt="Skiers and snowboarders on AfriSki slopes" loading="lazy">
+                <div class="gallery-caption">
+                    <span>AfriSki Snow Resort</span>
+                    <span class="gallery-caption-tag">Winter Sports</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="adventure">
+            <div class="gallery-wrap" onclick="showImage('hiking.jpeg', 'Highland Hiking Trails')">
+                <img src="hiking.jpeg" class="gallery-image" alt="Hiker traversing mountain trails" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Highland Hiking</span>
+                    <span class="gallery-caption-tag">Trails</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="culture">
+            <div class="gallery-wrap" onclick="showImage('thaba.jpeg', 'Thaba-Bosiu Royal Stronghold')">
+                <img src="thaba.jpeg" class="gallery-image" alt="Thaba-Bosiu plateau sandstone fortress" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Thaba-Bosiu</span>
+                    <span class="gallery-caption-tag">Heritage</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="mountains">
+            <div class="gallery-wrap" onclick="showImage('thebe.jpeg', 'Sehlabathebe National Park')">
+                <img src="thebe.jpeg" class="gallery-image" alt="Sehlabathebe sandstone arches and rock pools" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Sehlabathebe Park</span>
+                    <span class="gallery-caption-tag">UNESCO Nature</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="culture">
+            <div class="gallery-wrap" onclick="showImage('basotho.jpeg', 'Basotho Cultural Heritage')">
+                <img src="basotho.jpeg" class="gallery-image" alt="Basotho traditional blankets and mountain life" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Basotho Culture</span>
+                    <span class="gallery-caption-tag">Culture</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="accommodation">
+            <div class="gallery-wrap" onclick="showImage('lodge.jpg', 'Highland Alpine Lodge')">
+                <img src="lodge.jpg" class="gallery-image" alt="Rustic stone mountain lodge with fireplace" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Mountain Lodge</span>
+                    <span class="gallery-caption-tag">Stay</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="accommodation">
+            <div class="gallery-wrap" onclick="showImage('hotel.jpeg', 'Comfortable City Hotel')">
+                <img src="hotel.jpeg" class="gallery-image" alt="Modern hotel room in Maseru" loading="lazy">
+                <div class="gallery-caption">
+                    <span>City Hotel</span>
+                    <span class="gallery-caption-tag">Stay</span>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="col-md-4 col-6 gallery-item reveal" data-category="accommodation">
+            <div class="gallery-wrap" onclick="showImage('camping.jpeg', 'Starry Highland Camping')">
+                <img src="camping.jpeg" class="gallery-image" alt="Camp under the stars in Lesotho mountains" loading="lazy">
+                <div class="gallery-caption">
+                    <span>Starry Camping</span>
+                    <span class="gallery-caption-tag">Stay</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <div id="imageModal" class="image-modal" onclick="closeImage()">
+        <span class="close-modal" title="Close Lightbox" onclick="closeImage()">&times;</span>
+        <div class="modal-inner" onclick="event.stopPropagation()">
+            <img id="previewImage" alt="Selected gallery photograph">
+            <p id="previewCaption" class="modal-caption"></p>
+            <div id="previewCounter" class="modal-counter"></div>
+            <div class="modal-nav">
+                <button class="modal-nav-btn" id="prevBtn" onclick="navigateGallery(-1)" aria-label="Previous photo">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="modal-nav-btn" id="nextBtn" onclick="navigateGallery(1)" aria-label="Next photo">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<button id="backToTop" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+
+<footer>
+    <div class="container footer-inner">
+        <div class="row g-4 justify-content-between align-items-start">
+            <div class="col-md-4">
+                <div class="footer-brand">
+                    <span>🏔️</span> Discover Lesotho
+                </div>
+                <p class="footer-desc">Your official tourism guide to the Kingdom in the Sky. Explore pristine alpine peaks, ancient cultural heritage, and thrilling adventures.</p>
+            </div>
+            <div class="col-md-3">
+                <h6 class="footer-heading">Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Lesotho</a></li>
+                    <li><a href="destinations.html"><i class="bi bi-chevron-right"></i> Tourist Destinations</a></li>
+                    <li><a href="accommodation.html"><i class="bi bi-chevron-right"></i> Accommodation &amp; Rates</a></li>
+                    <li><a href="gallery.html"><i class="bi bi-chevron-right"></i> Photo Gallery</a></li>
+                    <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Bookings &amp; Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6 class="footer-heading">Contact &amp; Location</h6>
+                <p class="footer-contact"><i class="bi bi-geo-alt-fill"></i> Tourism House, Kingsway, Maseru</p>
+                <p class="footer-contact"><i class="bi bi-telephone-fill"></i> +266 2231 2345</p>
+                <p class="footer-contact"><i class="bi bi-envelope-fill"></i> info@discoverlesotho.ls</p>
+                <p class="footer-contact"><i class="bi bi-clock-fill"></i> Mon – Fri, 08:00 – 17:00 SAST</p>
+            </div>
+        </div>
+        <hr class="footer-divider">
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+            <p class="footer-copy">&copy; 2026 Discover Lesotho Tourism Website. All rights reserved.</p>
+            <p class="footer-copy text-sm-end">Student Project by Paseka (901022096)</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
